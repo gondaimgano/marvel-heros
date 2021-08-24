@@ -14,7 +14,7 @@ import java.util.Optional;
 
 @FunctionalInterface
 interface BaseWrapper<T>{
-  public ResponseEntity<ApiResponse<T>>  execute() throws ApiException;
+   ResponseEntity<ApiResponse<T>>  execute() throws ApiException;
 }
 
 

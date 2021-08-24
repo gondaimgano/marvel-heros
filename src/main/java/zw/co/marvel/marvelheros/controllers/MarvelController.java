@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import zw.co.marvel.marvelheros.entities.Hero;
 import zw.co.marvel.marvelheros.response.ApiResponse;
 import zw.co.marvel.marvelheros.service.hero.HeroService;
-import zw.co.marvel.marvelheros.service.hero.HeroServiceImpl;
 
 import java.util.List;
 
