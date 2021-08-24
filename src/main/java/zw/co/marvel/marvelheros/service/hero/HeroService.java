@@ -1,7 +1,7 @@
 package zw.co.marvel.marvelheros.service.hero;
 
 import zw.co.marvel.marvelheros.entities.Hero;
-import zw.co.marvel.marvelheros.response.ApiException;
+import zw.co.marvel.marvelheros.dtos.ApiException;
 
 import java.util.List;
 import java.util.Optional;

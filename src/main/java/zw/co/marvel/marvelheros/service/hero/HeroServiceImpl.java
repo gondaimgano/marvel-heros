@@ -5,8 +5,8 @@ import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import zw.co.marvel.marvelheros.entities.Hero;
-import zw.co.marvel.marvelheros.repos.HeroRepository;
-import zw.co.marvel.marvelheros.response.ApiException;
+import zw.co.marvel.marvelheros.repositories.HeroRepository;
+import zw.co.marvel.marvelheros.dtos.ApiException;
 
 import java.util.List;
 import java.util.Optional;

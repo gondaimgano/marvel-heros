@@ -1,4 +1,4 @@
-package zw.co.marvel.marvelheros.response;
+package zw.co.marvel.marvelheros.dtos;
 
 import lombok.Builder;
 import lombok.Getter;

@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import zw.co.marvel.marvelheros.entities.Hero;
-import zw.co.marvel.marvelheros.response.ApiResponse;
+import zw.co.marvel.marvelheros.dtos.ApiResponse;
 import zw.co.marvel.marvelheros.service.hero.HeroService;
 
 import java.util.List;

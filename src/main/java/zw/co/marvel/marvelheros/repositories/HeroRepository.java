@@ -1,8 +1,6 @@
-package zw.co.marvel.marvelheros.repos;
+package zw.co.marvel.marvelheros.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.lang.NonNull;
 import zw.co.marvel.marvelheros.entities.Hero;
 
 import java.util.List;

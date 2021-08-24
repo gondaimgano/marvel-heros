@@ -1,6 +1,4 @@
-package zw.co.marvel.marvelheros.response;
-
-import lombok.Builder;
+package zw.co.marvel.marvelheros.dtos;
 
 
 public class ApiException extends    Exception{

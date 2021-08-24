@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.http.converter.HttpMessageNotWritableException;
-import zw.co.marvel.marvelheros.response.ApiException;
-import zw.co.marvel.marvelheros.response.ApiResponse;
+import zw.co.marvel.marvelheros.dtos.ApiException;
+import zw.co.marvel.marvelheros.dtos.ApiResponse;
 
 import java.util.Optional;
 
