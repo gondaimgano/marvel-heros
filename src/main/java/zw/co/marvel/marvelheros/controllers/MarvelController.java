@@ -3,6 +3,8 @@ package zw.co.marvel.marvelheros.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import zw.co.marvel.marvelheros.controllers.base.BaseController;
+import zw.co.marvel.marvelheros.controllers.base.BaseWrapper;
 import zw.co.marvel.marvelheros.entities.Hero;
 import zw.co.marvel.marvelheros.dtos.ApiResponse;
 import zw.co.marvel.marvelheros.service.hero.HeroService;
@@ -12,7 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/marvel")
-public class MarvelController extends  BaseController{
+public class MarvelController extends BaseController {
     @Autowired
     HeroService heroService;
 

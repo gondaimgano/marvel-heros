@@ -1,4 +1,4 @@
-package zw.co.marvel.marvelheros.controllers;
+package zw.co.marvel.marvelheros.controllers.base;
 
 import lombok.val;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -12,10 +12,7 @@ import zw.co.marvel.marvelheros.dtos.ApiResponse;
 
 import java.util.Optional;
 
-@FunctionalInterface
-interface BaseWrapper<T>{
-   ResponseEntity<ApiResponse<T>>  execute() throws ApiException;
-}
+
 
 
 public class BaseController {
