@@ -5,7 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import zw.co.marvel.marvelheros.entities.Hero;
 import zw.co.marvel.marvelheros.response.ApiResponse;
-import zw.co.marvel.marvelheros.service.HeroServiceImpl;
+import zw.co.marvel.marvelheros.service.hero.HeroService;
+import zw.co.marvel.marvelheros.service.hero.HeroServiceImpl;
 
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @RequestMapping("/marvel")
 public class MarvelController extends  BaseController{
     @Autowired
-    HeroServiceImpl heroService;
+    HeroService heroService;
 
     @GetMapping("/heroes")
     public ResponseEntity<ApiResponse<List<Hero>>> fetchAllHeroes() {

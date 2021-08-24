@@ -1,4 +1,4 @@
-package zw.co.marvel.marvelheros.service;
+package zw.co.marvel.marvelheros.service.hero;
 
 import lombok.Getter;
 import lombok.val;
@@ -12,13 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 
-interface  HeroService{
-      Optional<List<Hero>> fetchHeroes() throws ApiException;
-       Optional<Hero> addHero(Hero item) throws ApiException;
-    Optional<List<Hero>> findByName(String name) throws ApiException;
-       Optional<Hero> findById(Long id) throws  ApiException;
-       Optional<Hero> update(Hero item) throws  ApiException;
-}
+
 
 @Service
 @Getter
