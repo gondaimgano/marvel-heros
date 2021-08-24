@@ -13,14 +13,14 @@ import zw.co.marvel.marvelheros.response.ApiResponse;
 import java.util.Optional;
 
 @FunctionalInterface
-interface Wrapper<T>{
+interface BaseWrapper<T>{
   public ResponseEntity<ApiResponse<T>>  execute() throws ApiException;
 }
 
 
 public class BaseController {
 
-    public  <T> ResponseEntity<ApiResponse<T>> tryToExecute(Wrapper<T> callback){
+    public  <T> ResponseEntity<ApiResponse<T>> tryToExecute(BaseWrapper<T> callback){
         try {
            return  callback.execute();
         }
