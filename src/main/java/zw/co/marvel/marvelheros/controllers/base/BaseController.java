@@ -1,6 +1,7 @@
 package zw.co.marvel.marvelheros.controllers.base;
 
 import lombok.val;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.QueryTimeoutException;
 import org.springframework.http.HttpStatus;
@@ -10,6 +11,7 @@ import org.springframework.http.converter.HttpMessageNotWritableException;
 import zw.co.marvel.marvelheros.dtos.ApiException;
 import zw.co.marvel.marvelheros.dtos.ApiResponse;
 
+import java.util.Locale;
 import java.util.Optional;
 
 
@@ -28,7 +30,13 @@ public class BaseController {
 
             if(ex instanceof  DataIntegrityViolationException) {
 
-                message = "You have violated an integrity constraint";
+
+                if (message.toLowerCase().contains("values (")) {
+
+                    message = "record already exists";
+                }
+                else
+                  message = "You have violated an integrity constraint";
             }
             if(ex instanceof HttpMessageNotWritableException || ex instanceof HttpMessageNotReadableException)
                 message = "There's something wrong with your request! Try again";

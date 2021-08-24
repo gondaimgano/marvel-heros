@@ -29,7 +29,7 @@ public class HeroServiceImpl implements HeroService {
     }
 
     @Override
-    public Optional<Hero> addHero(Hero item) throws  ApiException {
+    public Optional<Hero> saveHero(Hero item) throws  ApiException {
         if(item.getDescription() == null || item.getDescription().isEmpty() )
             throw new ApiException("You did not supply a super power description dude!");
         else if(item.getName() == null || item.getName().isEmpty() )
@@ -58,7 +58,8 @@ public class HeroServiceImpl implements HeroService {
     }
 
     @Override
-    public Optional<Hero> update(Hero item) {
+    public Optional<Hero> update(Hero item) throws  ApiException{
+        heroRepository.save(item);
 
         return Optional.empty();
     }

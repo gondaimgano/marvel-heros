@@ -52,7 +52,8 @@ public class MarvelController extends BaseController {
                     Hero hero)  {
 
 
-            return tryToExecute(()-> invokeService(heroService.addHero(hero), "Hero is saved!", "unable to save!"));
+            return tryToExecute(()-> invokeService(heroService.saveHero(hero),
+                    "Hero is saved!", "unable to save!"));
 
 
     }

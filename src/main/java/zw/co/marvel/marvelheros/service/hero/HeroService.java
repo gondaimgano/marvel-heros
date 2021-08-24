@@ -8,7 +8,7 @@ import java.util.Optional;
 
 public interface HeroService {
     Optional<List<Hero>> fetchHeroes() throws ApiException;
-    Optional<Hero> addHero(Hero item) throws ApiException;
+    Optional<Hero> saveHero(Hero item) throws ApiException;
     Optional<List<Hero>> findByName(String name) throws ApiException;
     Optional<Hero> findById(Long id) throws  ApiException;
     Optional<Hero> update(Hero item) throws  ApiException;
