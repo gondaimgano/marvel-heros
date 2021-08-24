@@ -14,7 +14,6 @@ import java.util.Optional;
 
 
 
-
 public class BaseController {
 
     public  <T> ResponseEntity<ApiResponse<T>> tryToExecute(BaseWrapper<T> callback){
@@ -34,7 +33,7 @@ public class BaseController {
             if(ex instanceof HttpMessageNotWritableException || ex instanceof HttpMessageNotReadableException)
                 message = "There's something wrong with your request! Try again";
            return ResponseEntity.badRequest().body(
-                    ApiResponse.<T>builder().message(message).statusCode(HttpStatus.BAD_REQUEST.value()).build()
+                    ApiResponse.<T>builder().message(message).statusCode(HttpStatus.BAD_REQUEST).build()
             );
         }
 
@@ -47,7 +46,7 @@ public class BaseController {
             val response = item.map(subject -> ResponseEntity.ok(
                     ApiResponse.<T>builder().body(
                             subject
-                    ).message(success).statusCode(HttpStatus.OK.value()).build()
+                    ).message(success).statusCode(HttpStatus.OK).build()
 
             ));
             if (response.isPresent()) {
@@ -57,7 +56,7 @@ public class BaseController {
 
         } catch (Exception ex) {
             result = ResponseEntity.badRequest().body(
-                    ApiResponse.<T>builder().message(ex.getMessage()).statusCode(HttpStatus.BAD_REQUEST.value()).build()
+                    ApiResponse.<T>builder().message(ex.getMessage()).statusCode(HttpStatus.BAD_REQUEST).build()
             );
         }
         return result;
